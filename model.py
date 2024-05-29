@@ -5,8 +5,8 @@ gdal.DontUseExceptions()
 import os
 
 # Load the data
-pomniki = gpd.read_file('/home/ard/Downloads/dane/PomnikiPrzyrodyPoint.shp')
-rezerwaty = gpd.read_file('/home/ard/Downloads/dane/PomnikiPrzyrodyPoint.shp')
+pomniki = gpd.read_file('PomnikiPrzyrodyPoint.shp')
+rezerwaty = gpd.read_file('PomnikiPrzyrodyPoint.shp')
 # Get pomniki inside rezerwaty
 pomniki_rezerwaty = gpd.sjoin(pomniki, rezerwaty, how='left', predicate='within')
 # Create a buffer around pomniki
